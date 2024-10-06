@@ -1,0 +1,399 @@
+:root {
+  /* Define color variables */
+  --primary-color:#2c3e50;    /* Blue */
+  --iconBgColor:#34495e;
+  --hover-bg: #1abc9c;         /* Hover state background */
+
+  --secondary-color: #2ecc71;  /* Green */
+  --background-color: #ecf0f1; /* Light gray */
+  
+  --button-bg: #2980b9;        /* Darker blue for buttons */
+  --button-text-color: #fff;   /* White text on buttons */
+
+}
+
+
+
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  /* Container for the layout */
+  .container {
+    display: flex;
+    justify-content: center; /* Centers the panels */
+    gap: 20px; /* Adds gap between left and right panels */
+    padding: 20px;
+  }
+  
+  .left-panel {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 20px;
+    width: 300px;
+    height: 700px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content from the top */
+    gap: 20px; /* Space between sections */
+  }
+  
+  .profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the picture, name, and profession horizontally */
+    gap: 10px; /* Space between the picture, name, and profession */
+  }
+  
+  .profile-pic img {
+    width: 150px;
+    border-radius: 50%;
+  }
+  
+  .profession {
+    font-size: 16px;
+    color: #bbb;
+  }
+  
+  .divider {
+    border: none;
+    border-top: 1px solid #fff;
+    margin: 10px 0;
+  }
+  
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Space between contact items */
+  }
+  
+  .contact-item {
+    display: flex;
+    justify-content: space-between; /* Align label and value horizontally */
+    font-size: 14px;
+    margin: 0;
+    padding: 0%;
+    justify-content:center;
+    gap:20px
+  }
+  .imgicon{
+    height: 35px;
+    width: 45px;
+    background-color:var(--iconBgColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;      
+    border-radius: 5px;
+    
+  }
+  
+  .info{
+    margin-top: 2px;
+  }
+  .myName{
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  
+  .bottom_icons
+  {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  /* Right panel styling */
+.right-panel {
+  position: relative; /* Make the panel relative to allow absolute positioning */
+  width: 50%; /* Adjust the width as per your layout */
+  height: 100vh; /* Full height of the viewport */
+  background-color: #ecf0f1;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+  overflow-y: auto; /* Make the content scrollable */
+}
+
+/* Top navigation bar */
+.top-bar {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px; /* Space between buttons */
+}
+
+.nav-button {
+  background-color: #34495e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+  background-color: var(--hover-bg); /* Change color on hover */
+}
+
+/* About section layout */
+.about-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Space between each section */
+  margin-top: 80px; /* Adjust the space below the top bar */
+}
+
+/* Individual sections */
+.about-me, .what-i-am-doing, .placeholder {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for each section */
+}
+
+.about-me h2, .what-i-am-doing h2, .placeholder h2 {
+  margin-bottom: 15px; /* Space between heading and content */
+}
+.aboutmepara{
+  line-height:1.5;
+}
+/* Grid layout for rectangles */
+.rectangle-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 20px; /* Space between the rectangles */
+  margin-top: 20px;
+}
+
+/* Rectangle styling */
+.rectangle {
+  background-color: #34495e;
+  width: 100%;
+  height: 120px; /* Height of the rectangles */
+  border-radius: 10px; /* Rounded corners for rectangles */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  display: flex;
+  
+  justify-content: center; /* Horizontal centering */
+  align-items: center; /* Vertical centering */
+  gap: 15px;
+  padding: 20px;
+}
+
+.innerText{
+   display: flex;
+   flex-direction: column;
+   gap: 5px; 
+   color: #ecf0f1;
+   font-size: 19px;
+   text-align: justify;
+}
+
+.smallText{
+  font-size: 16px;
+}
+
+/* resume panel */
+
+/* Basic styling for the resume section */
+/* Resume section layout */
+.resume_panel {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Space between each section */
+  margin-top: 80px; /* Adjust the space below the top bar */
+}
+
+/* Individual sections (Education, Experience) */
+.education, .experience {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for each section */
+}
+
+.education h2, .experience h2 {
+  margin-bottom: 15px; /* Space between heading and content */
+}
+
+/* List styles for institutions and companies */
+.resume-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.resume-section li {
+  margin-bottom: 20px;
+}
+
+/* Institution and company styles */
+.institution, .company {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.institution strong, .company strong {
+  font-weight: bold;
+}
+
+.institution p, .company p {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #7f8c8d;
+}
+
+/* Nested list for duties */
+.duties {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.duties li {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #7f8c8d;
+}
+
+/* Portfolio section styling */
+.portfolio_panel {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+/* Each portfolio category (Game Art, Web Dev, etc.) */
+.portfolio-category {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Title for each category */
+.portfolio-category h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Grid layout for images */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* Grid items (images) */
+.grid-item {
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .portfolio-grid {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+}
+
+/* Contact section container */
+.contactMe_panel {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 50px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom Header for Map and Form */
+.custom-header-map {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 20px;
+  margin-left: 0px;
+  color: black;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+/* Map box styling */
+.map-box-map {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Contact form layout */
+.contact-form-map {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form group styling */
+.form-group-map {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form-group-map label {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.form-group-map input, .form-group-map textarea {
+  padding: 10px;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #ecf0f1;
+}
+
+.form-group-map input:focus, .form-group-map textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+/* Custom Send Button */
+.custom-button-map {
+  background-color: #3498db;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button-map:hover {
+  background-color: #1d6fa5;
+}
